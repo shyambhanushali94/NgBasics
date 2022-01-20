@@ -1,0 +1,25 @@
+<div [style.borderStyle]=borderStyle> Interpolation Eg:-
+  <!-- start: interpolation eg1 -->
+  <p [style.color]="color">Hi {{name}} . Your age is {{age}}</p>
+  <!-- end: interpolation eg1 -->
+  <!-- start: property binding -->
+  <img width="300rem" src="{{imgPath}}" [hidden]="isHidden" alt="" bitmoji>
+  <!-- end: property binding -->
+  <br>
+  {{statusCheck()}}
+  <br>
+  Your app is {{appStatus? status1 : status2}}
+
+  <app-parent>
+    <div>
+      <div>
+        <app-child1></app-child1>
+      </div>
+      <div>
+        <app-child2></app-child2>
+      </div>
+    </div>
+  </app-parent>
+  <!-- <app-child1></app-child1>
+  <app-child2></app-child2> -->
+</div>
