@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-child2',
@@ -11,5 +11,6 @@ export class Child2Component implements OnInit {
 
   ngOnInit(): void {
   }
+  @Input() fromChild2:string=""
 
 }

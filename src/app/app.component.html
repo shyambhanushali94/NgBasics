@@ -1,15 +1,50 @@
-<div [style.borderStyle]=borderStyle> Interpolation Eg:-
+<div [style.borderStyle]=borderStyle> Interpolation Eg With Property binging:-
   <!-- start: interpolation eg1 -->
-  <p [style.color]="color">Hi {{name}} . Your age is {{age}}</p>
+  <p [style.background-color]="color">Hi {{name}} . Your age is {{age}}</p>
   <!-- end: interpolation eg1 -->
   <!-- start: property binding -->
-  <img width="300rem" src="{{imgPath}}" [hidden]="isHidden" alt="" bitmoji>
+  <button (click)=ToogleShow()>Click To {{HideOrShow}} Image</button> <br>
+  <img width="300rem" src="{{imgPath}}" [hidden]="isHidden" alt=" bitmoji">
   <!-- end: property binding -->
   <br>
   {{statusCheck()}}
   <br>
-  Your app is {{appStatus? status1 : status2}}
+  Your app is {{appStatus? status1 : status2}} <br>
+  <!--  leave this code as it is
+ts
+  randColor(){
+     
+    const r = Math.floor(Math.random()* 255);
+    const g = Math.floor(Math.random()* 255);
+    const b = Math.floor(Math.random()* 255);
+    const newColor =`rgb(${r},${g},${b})`;
+    
+    }
+    
+  _________________________
+  html
 
+   <button (click)=randColor()>Click To Give Random to div</button>
+  <div [ngstyle]="{'background-color()':}"> hi</div>  -->
+
+
+  <br>
+  <button (click)=RandColor()>Click To Give Random Color To App</button>
+
+  <div>
+    <input type="text" value="" placeholder="Type text for preview" name="Bhanushali" #printInfo>
+    <button (click)="print(printInfo)">Show Input</button> <br>
+    <br>
+    Preview text:-
+    {{textInput}}
+  </div>
+  <div>
+    <input type="text" value="" [(ngModel)]="preview">
+    <p>
+      {{preview}}
+    </p>
+  </div>
+  <br><br><br><br><br>
   <app-parent>
     <div>
       <div>
