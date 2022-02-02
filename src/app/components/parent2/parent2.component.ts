@@ -11,5 +11,7 @@ export class Parent2Component implements OnInit {
 
   ngOnInit(): void {
   }
-
+test(e: any){
+  alert(e)
+}
 }

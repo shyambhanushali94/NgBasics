@@ -11,13 +11,18 @@ export class ParentComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  
   title = 'NgBasics';
   name: string = 'Jigar';
   age: number = 2022 - 1999;
   imgPath = 'https://image.emojipng.com/707/12061707.jpg';
   isHidden: boolean = true;
   HideOrShow: string = "Show";
-  ToogleShow() {
+
+
+
+  ToogleShow(e: any) {
     this.isHidden = !this.isHidden;
     if (!this.isHidden) {
       this.HideOrShow = "Hide"

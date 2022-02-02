@@ -6,13 +6,23 @@
     <p [style.background-color]="color">Hi {{name}} . Your age is {{age}}</p>
     <!-- end: interpolation eg1 -->
     <!-- start: property binding -->
-    <button (click)=ToogleShow()>Click To {{HideOrShow}} Image</button> <br>
-    <img width="300rem" src="{{imgPath}}" [hidden]="isHidden" alt=" bitmoji">
+
+
+
+
+    <button (click)="ToogleShow($event)" >Click To {{HideOrShow}} Image</button> <br>
+    <img width="300rem" src="{{imgPath}}" [hidden]="isHidden" alt=" bitmoji" >
     <!-- end: property binding -->
     <br>
     {{statusCheck()}}
     <br>
     Your app is {{appStatus? status1 : status2}} <br>
+    
+
+
+
+
+
     <!--  leave this code as it is
       ts
       randColor(){
