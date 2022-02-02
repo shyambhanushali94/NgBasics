@@ -1,9 +1,11 @@
-    <div>
-      <h1>Routing practice</h1>
-      <nav>
-      <a routerLink="/parent">parent</a>
-      <a routerLink="parent2">parent2</a>
-    </nav>
-    </div>
-    <router-outlet></router-outlet>
-    
+
+<app-header></app-header>
+<div class="d-flex">
+  
+<app-sidenav class="sidenav"></app-sidenav>
+<div class="main-display"><router-outlet></router-outlet></div>
+</div>
+<app-footer></app-footer>
+
+
+
