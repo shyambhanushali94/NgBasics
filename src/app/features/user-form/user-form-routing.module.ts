@@ -14,7 +14,7 @@ const routes: Routes = [
         component: UserFormListComponent
       },
       {
-        path: 'user',
+        path: 'user-list',
         component: UserFormListComponent
       },
       {
