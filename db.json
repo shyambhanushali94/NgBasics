@@ -1,0 +1,17 @@
+{
+  "department": [
+    {
+      "id": 1,
+      "name": "Angular"
+    },
+    {
+      "id": 2,
+      "name": "Machine Learning"
+    },
+    {
+      "id": 3,
+      "name": "Data Science"
+    }
+  ],
+  "products": []
+}
