@@ -7,7 +7,7 @@ import { PageNotFoundComponent } from './core/page-not-found/page-not-found.comp
 const routes: Routes = [
   {
     path:'',
-    redirectTo:'./user-form-list' , pathMatch:'full'
+    redirectTo:'user-forms' , pathMatch:'full'
     
   },
   {

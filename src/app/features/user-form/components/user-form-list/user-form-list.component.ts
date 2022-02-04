@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from '../../model/user.model';
+import { CrudService } from '../../services/crud.service';
 
 @Component({
   selector: 'app-user-form-list',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserFormListComponent implements OnInit {
 
-  constructor() { }
+  users:User[];
+
+  constructor(private service:CrudService) { }
 
   ngOnInit(): void {
+    console.log("list ng onInIt");
+    
+  this.getUserData()
+  }
+
+  getUserData(){
+    this.service.getAll().subscribe((data)=>{
+      this.users=data
+    })
   }
 
 }

@@ -1,10 +1,10 @@
 <p>user-form-list works!</p>
 <div>
-    <input type="search" name="" id="">
-    <button routerLink="/user-forms/add">Add</button>
+    <input type="search" name="" id="" placeholder="Search">
+    <button routerLink="/user-forms/add" class="btn btn-primary mx-3">Add</button>
 </div>
 <div>
-    <table>
+    <table class="mt-3">
         <thead>
             <tr>
                 <th>FirstName</th>
@@ -18,15 +18,15 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>Jigar</td>
-                <td>Bhanushali</td>
-                <td>ahs@gmail.com</td>
-                <td>9876543211</td>
-                <td>Male</td>
-                <td>12/12/2001</td>
-                <td>Angular</td>
-                <td><button>Edit</button><button>Delete</button></td>
+            <tr *ngFor="let myUser of users">
+                <td>{{myUser.firstName}}</td>
+                <td>{{myUser.lastName}}</td>
+                <td>{{myUser.email}}</td>
+                <td>{{myUser.phoneNo}}</td>
+                <td>{{myUser.gender}}</td>
+                <td>{{myUser.dateOfEmpmt}}</td>
+                <td>{{myUser.department}}</td>
+                <td><button class="btn btn-info">Edit</button><button class="btn btn-danger mx-3">Delete</button></td>
             </tr>
         </tbody>
     </table>

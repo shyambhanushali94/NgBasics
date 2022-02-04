@@ -1,0 +1,54 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "jay",
+      "lastName": "bhanushali",
+      "email": "ag@dm.com",
+      "phoneNo": "9987654321",
+      "dateOfEmpmt": "5-5-2005",
+      "gender": "Male",
+      "department": "Angular"
+    },
+    {
+      "firstName": "om",
+      "lastName": "om",
+      "email": "om",
+      "phoneNo": "(963) (85274)1",
+      "dateOfEmpmt": "2022-03-03",
+      "gender": "male",
+      "department": "ML",
+      "id": 2
+    },
+    {
+      "firstName": "asd",
+      "lastName": "a",
+      "email": "",
+      "phoneNo": "(123) (1231233)3",
+      "dateOfEmpmt": "",
+      "gender": "",
+      "department": "",
+      "id": 3
+    },
+    {
+      "firstName": "k",
+      "lastName": "lasj",
+      "email": "LKASN@JSBF.COMAS",
+      "phoneNo": "(564) (5464644))",
+      "dateOfEmpmt": "2022-02-27",
+      "gender": "male",
+      "department": "Datascience",
+      "id": 4
+    },
+    {
+      "firstName": "AS",
+      "lastName": "FD",
+      "email": "",
+      "phoneNo": "",
+      "dateOfEmpmt": "",
+      "gender": "",
+      "department": "",
+      "id": 5
+    }
+  ]
+}

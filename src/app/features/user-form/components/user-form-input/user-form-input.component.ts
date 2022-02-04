@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { CrudService } from '../../services/crud.service';
 
 @Component({
   selector: 'app-user-form-input',
@@ -11,42 +12,42 @@ import { Router } from '@angular/router';
 
 export class UserFormInputComponent implements OnInit {
   userForm: FormGroup;
-  
-  constructor(private formBuilder: FormBuilder, private router: Router) { }
+
+  constructor(private formBuilder: FormBuilder, private router: Router,private service: CrudService) { }
   get getValue() {
     return this.userForm['controls'];
   }
 
-  onSubmit(){
-    console.log('submit working')
-this.router.navigate(['/user-forms/user-list'])
-  }
+  
 
 
   ngOnInit(): void {
     this.buildUserform();
   }
-  buildUserform(){
+  
+  buildUserform() {
     this.userForm = this.formBuilder.group({
+      firstName: ['', Validators.required],
+      lastName: ['', Validators.required],
+      email: [''],
+      phoneNo: [''],
+      dateOfEmpmt: [''],
+      gender: [''],
+      department: ['']
 
-      lastName: [],
-      firstName:[],
-      email:[],
-      phoneNo: [],
-      dateOfEmpmt: [],
-      gender: []
-  
     });
-    // this.userForm = this.formBuilder.group({
+  }
 
-    //   lastName: ['', Validators.required],
-    //   firstName: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(5)]],
-    //   email: [, Validators.email, Validators.required],
-    //   phoneNo: [null, [Validators.required, Validators.minLength(10), Validators.maxLength(10)]],
-    //   dateOfEmpmt: [true, Validators.required],
-    //   gender: []
-  
-    // });
+  onSubmit() {
+    console.log('submit working')
+    console.log(this.userForm);
+    if (this.userForm.status === 'VALID') {
+      this.service.create(this.userForm.value).subscribe();
+      this.router.navigate(['/user-forms/user-list'])
+      
+    }
+
   }
-  }
- 
+
+}
+

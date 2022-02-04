@@ -7,48 +7,81 @@
             <legend>User Input Form</legend>
             <!-- start of personal information input -->
             <div>
-                <label for="firstName">First Name:</label>
-                <input type="text" formControlName="firstName" placeholder="Enter your first name"  id="firstName" required autofocus><br>
-                <div *ngIf="getValue['firstName'].touched"><span *ngIf="getValue['firstName'].errors && getValue['firstName'].errors['required']">First-name required</span></div>
+                <label for="firstName" class="col-sm-2 col-form-label">First Name:</label>
+                <input type="text" formControlName="firstName" placeholder="Enter your first name" id="firstName"
+                    autofocus><br>
+                <div *ngIf="getValue['firstName'].touched">
+                    <span class="text-danger"
+                        *ngIf="getValue['firstName'].errors && getValue['firstName'].errors['required']">
+                        First-name required
+                    </span>
+                </div>
             </div>
             <div>
-                <label for="lastName">Last Name:</label>
-                <input type="text" formControlName="lastName" placeholder="Enter your last name" id="lastName" required><br>
+                <label for="lastName" class="col-sm-2 col-form-label">Last Name:</label>
+                <input type="text" formControlName="lastName" placeholder="Enter your last name" id="lastName"><br>
+                <div *ngIf="getValue['lastName'].touched">
+                    <span class="text-danger"
+                        *ngIf="getValue['lastName'].errors && getValue['lastName'].errors['required']">
+                        Last-name required
+                    </span>
+                </div>
             </div>
             <div>
-                <label for="email">Email:</label>
-                <input type="email" name="email" formControlName="email" id="email" placeholder="Enter your email" required><br>
+                <label for="email" class="col-sm-2 col-form-label">Email:</label>
+                <input type="email" class="" name="email" formControlName="email" id="email"
+                    placeholder="Enter your email"><br>
             </div>
             <div>
-                <label for="phone">Enter a phone number:</label>
-                <input type="tel" formControlName="phoneNo" id="phone" name="phone" placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
-                    required> <br>
+                <label for="phone" class="col-sm-2 col-form-label">Enter a phone number:</label>
+                <input type="tel" formControlName="phoneNo" id="phone" name="phone" appPhoneMask
+                    placeholder="(987) (6543210)"> <br>
             </div>
             <div>
-                <label for="DOE">Date Of Employment</label>
-                <input type="datetime-local" formControlName="dateOfEmpmt" id="DOE"><br>
+                <label for="DOE" class="col-sm-2 col-form-label">Date Of Employment</label>
+                <input type="date" formControlName="dateOfEmpmt" id="DOE"><br>
             </div>
             <div>
-                <label for="gender">Gender</label>
-                <input type="radio" formControlName="gender" name="Gender" id="male" checked>
-                <label for="male">Male</label>
-                <input type="radio" formControlName="gender" name="Gender" id="female">
-                <label for="female">Female</label><br>
+                <label for="gender" class="col-sm-2 col-form-label">Gender</label>
+                <input type="radio" formControlName="gender" name="gender" id="male" value="male">
+                <label for="male" class="mx-3">Male</label>
+                <input type="radio" formControlName="gender" name="gender" id="female" value="female">
+                <label for="female" class="mx-3">Female</label><br>
             </div>
+
+            
             <div>
-                <label for="Depart">Department</label>
-                <select name="Depart" id="Depart">
+                <label for="Depart" class="col-sm-2 col-form-label">Department</label>
+                <select name="Depart" id="Depart" formControlName="department">
                     <option value="angular">Angular</option>
                     <option value="ML">Machine-Learning</option>
                     <option value="Datascience">Data-Science</option>
                 </select><br>
             </div>
-            <!--Button to check Validation -->
-            <button type="submit" >Submit</button>
-            <button type="reset">Reset</button>
-
+            <div class="">
+                <!--Button to check Validation -->
+                <button type="submit" class="btn btn-success ">Submit</button>
+                <button type="reset" class="btn btn-danger mx-3">Reset</button>
+            </div>
         </fieldset>
     </form>
+
+
+    <!-- bootstrap form -->
+    <!-- <form>
+  <div class="form-group row">
+    <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+    <div class="col-sm-10">
+      <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="email@example.com">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+    </div>
+  </div>
+</form> -->
 
     <!-- user input form -->
 </div>
