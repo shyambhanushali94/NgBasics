@@ -6,6 +6,7 @@ import { SidenavComponent } from './sidenav/sidenav.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormsModule } from '@angular/forms';
 import { DataBindingRoutingModule } from '../features/data-binding/data-binding-routing.module';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 
@@ -13,7 +14,8 @@ import { DataBindingRoutingModule } from '../features/data-binding/data-binding-
   declarations: [
     HeaderComponent,
     SidenavComponent,
-    FooterComponent
+    FooterComponent,
+    PageNotFoundComponent
   ],
   imports: [
     CommonModule, 
@@ -25,7 +27,8 @@ import { DataBindingRoutingModule } from '../features/data-binding/data-binding-
   exports: [
     HeaderComponent,
     SidenavComponent,
-    FooterComponent
+    FooterComponent,
+    
   ]
 })
 export class CoreModule { }

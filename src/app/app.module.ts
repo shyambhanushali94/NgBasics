@@ -6,6 +6,7 @@ import { AppRoutingModule} from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DataBindingModule } from './features/data-binding/data-binding.module';
 import { CoreModule } from './core/core.module';
+import { UserFormModule } from './features/user-form/user-form.module';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { CoreModule } from './core/core.module';
     CoreModule,
     AppRoutingModule,
     DataBindingModule,
+    UserFormModule
     
   ],
   

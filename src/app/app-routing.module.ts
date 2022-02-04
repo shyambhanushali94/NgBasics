@@ -1,10 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { PageNotFoundComponent } from './core/page-not-found/page-not-found.component';
 
 
 
 const routes: Routes = [
-  
+  {
+    path:'',
+    redirectTo:'./user-form-list' , pathMatch:'full'
+    
+  },
   {
     path: 'directives',
     loadChildren: () => import('../app/features/directives/directives.module').then(m => m.DirectivesModule)
@@ -18,8 +23,13 @@ const routes: Routes = [
     
     path: 'user-forms',
     loadChildren: () => import('../app/features/user-form/user-form.module').then(m => m.UserFormModule)
-  }
+  },
 
+  {
+    path: '**',
+    component: PageNotFoundComponent
+    
+  }
 
 ];
 
