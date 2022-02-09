@@ -1,0 +1,25 @@
+<div class="list_container">
+    <div class="searchContainer">
+
+        <button routerLink="/resume/resume-form" class="btn">Click to Add Resume</button>
+
+    </div>
+    <table class="Resume-list">
+        <thead>
+            <tr>
+                <th class="cellSpacing">Id</th>
+                <th class="cellSpacing">First Name</th>
+                <th class="cellSpacing">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let resumes of resumeDetailLists">
+                 <td class="cellSpacing">{{resumes.id}}</td>
+                 <td class="cellSpacing">{{resumes.firstName}}</td>
+                 <td class="cellSpacing"><button class="btn btn-info btnSize" routerLink="/resume/resume-view">view</button>
+                    <button class="btn btn-danger ">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

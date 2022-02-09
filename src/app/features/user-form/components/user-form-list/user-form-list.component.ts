@@ -5,7 +5,7 @@ import { CrudService } from '../../services/crud.service';
 @Component({
   selector: 'app-user-form-list',
   templateUrl: './user-form-list.component.html',
-  styleUrls: ['./user-form-list.component.css']
+  styleUrls: ['./user-form-list.component.scss']
 })
 export class UserFormListComponent implements OnInit {
 

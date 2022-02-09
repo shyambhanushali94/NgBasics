@@ -1,0 +1,119 @@
+<div class="form_container">
+
+    <div class="container">
+        <header style="border-bottom: 2px solid #d8d8d8; margin: auto;">
+            <table class="sections">
+                <tr>
+                    <td>
+                        <h1>{{ this.resumeData.firstName + ' ' + this.resumeData.lastName }}</h1>
+                        <em>
+                            <!-- {{this.resumeData.}} -->
+                            
+                        </em>
+                    </td>
+                    <td style="width: 200px;">
+                        <button>DOWNLOAD PDF</button>
+                        <b><a href="mailto:name@yourdomain.com" style="color: #fe2323; ">{{this.resumeData.email}}</a></b><br>
+                        <b>{{this.resumeData.phoneNo}}</b>
+                    </td>
+                </tr>
+            </table>
+        </header>
+        <section>
+            <table style="border-bottom: 2px solid #d8d8d8;">
+                <tr  style="border-bottom: 2px solid #d8d8d8;">
+                    <td class="sections" style="width: 200px;;"><em>Profile</em></td>
+                    <td class="sections">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non, repudiandae obcaecati
+                            voluptate temporibus, quisquam nihil dolorem eligendi aperiam cum ipsum placeat. Ab dicta
+                            deleniti quod accusantium provident dolorem, porro soluta.</p>
+                    </td>
+                </tr>
+                <tr style="border-bottom: 2px solid #d8d8d8;">
+                    <td class="sections" style="width: 200px;"><em>Skills</em></td>
+                    <td>
+                        <table>
+                            <tr>
+                                <td  class="sections">
+                                    <h3>Web Design</h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut fugit assumenda
+                                        asperiores.</p>
+                                </td>
+                                <td class="sections">
+                                    <h3>Interface Design</h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Sequi
+                                    tenetur corporis suscipit.
+                                </td>
+                                <td class="sections">
+                                    <h3>Project Direction</h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Ex
+                                    deleniti animi eaque?
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr> 
+                <tr style="border-bottom: 2px solid #d8d8d8;">
+                    <td class="sections" style="width: 200px;"><em>Technical</em></td>
+                    <td  class="sections">
+                        <table >
+                            <tr style="border-bottom: 2px solid #d8d8d8;">
+                                <td style="width: 33.33%;">{{this.resumeData.technicalSkills}}</td>
+                                <td style="width: 33.33%;">{{this.resumeData.technicalSkills}}</td>
+                                <td>{{this.resumeData.technicalSkills}}</td>
+                            </tr>
+                            <tr style="border-bottom: 2px solid #d8d8d8;">
+                                <td></td>
+                                <td></td>
+                                <td> </td>
+                            </tr>
+                            
+                        </table>
+                    </td>
+                </tr>
+                <tr style="border-bottom: 2px solid #d8d8d8;">
+                    <td class="sections" style="width: 200px;"><em>Experience</em></td>
+                    <td  >
+                        <table>
+                            <tr style="border-bottom: 2px solid #d8d8d8;">
+                                <td  class="sections">
+                                    <h3>Facebook</h3>
+                                    <span style="display: block;">Senior Interface Designer</span>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus vero, enim ipsum
+                                        commodi pariatur animi voluptatum!</p>
+                                </td>
+                                <td class="sections" style="width: 100px;">
+                                    <p><b>{{this.resumeData.experience}}</b></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td  class="sections">
+                                    <h3>Apple Inc.</h3>
+                                    <span style="display: block;">Senior Interface Designer</span>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus vero, enim ipsum
+                                        commodi pariatur animi voluptatum!</p>
+                                </td>
+                                <td class="sections" style="width: 100px;">
+                                    <p><b>{{this.resumeData.experience}}</b></p>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr style="border-bottom: 2px solid #d8d8d8;">
+                    <td class="sections" style="width: 200px;"><em>Education</em></td>
+                    <td>
+                        <h4>{{this.resumeData.education}}</h4>
+                        <h5>Dual Major - <b>4.0 GPA</b></h5>
+                    </td>
+
+                </tr>
+            </table>
+        </section>
+        <footer   style="text-align: center; padding-bottom: 30px;">
+            <div style="width: 100%;">{{this.resumeData.firstName + ' ' + this.resumeData.lastName }} - <a href="mailto:name@yourdomain.com"
+                    style="color: #fe2323;">{{this.resumeData.email}}</a> - {{this.resumeData.phoneNo}}</div>
+        </footer>
+    </div>
+
+</div>

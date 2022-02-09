@@ -7,7 +7,7 @@ import { PageNotFoundComponent } from './core/page-not-found/page-not-found.comp
 const routes: Routes = [
   {
     path:'',
-    redirectTo:'user-forms' , pathMatch:'full'
+    redirectTo:'' , pathMatch:'full'
     
   },
   {
@@ -24,6 +24,12 @@ const routes: Routes = [
     path: 'user-forms',
     loadChildren: () => import('../app/features/user-form/user-form.module').then(m => m.UserFormModule)
   },
+  {
+    
+    path: 'employee',
+    loadChildren: () => import('../app/features/employee/employee.module').then(m => m.EmployeeModule)
+  },
+  { path: 'resume', loadChildren: () => import('./features/resume-builder/resume-builder.module').then(m => m.ResumeBuilderModule) },
 
   {
     path: '**',

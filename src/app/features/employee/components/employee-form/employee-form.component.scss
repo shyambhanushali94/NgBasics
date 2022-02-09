@@ -1,0 +1,39 @@
+.formContainer{
+    margin: .75rem;
+    padding: .75rem;
+    
+    .form{
+        // margin: .75rem;
+        // padding: .75rem;
+        color: #2c4d53;
+        display: flex;
+        // flex-direction: column;
+        justify-content: space-between;
+        
+        
+        align-items: center;
+    }
+    .btnContainer{
+        display: flex;
+        justify-content: right;
+    }
+    .btn{
+        padding: 5px 5px;
+        margin: 2px;
+        border-radius: 5px;
+    border: 1px solid #8bb8d7;
+    }
+    .btn-submit
+    {
+        background-color: rgb(110, 255, 110);
+    }
+    .btn-reset
+    {
+background-color: rgb(253, 120, 120);
+    }
+}
+.firstname,.lastname,.email,.phoneNo,.department,.dateOfEmployment,.gender{
+    display: flex;
+   margin: 1rem;
+    justify-content: space-between;
+}

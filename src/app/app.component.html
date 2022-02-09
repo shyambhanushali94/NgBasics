@@ -1,11 +1,22 @@
 
-<app-header></app-header>
-<div class="d-flex">
+<!-- <app-header></app-header> -->
+<!-- <div class="d-flex">
   
 <app-sidenav class="sidenav"></app-sidenav>
 <div class="main-display"><router-outlet></router-outlet></div>
-</div>
-<app-footer class="footer"></app-footer>
+</div> -->
+<!-- <app-footer class="footer"></app-footer> -->
 
 
 
+<div class="container">
+  
+    <div class="wrapper">
+      <aside class="sidenav">
+        <app-sidenav></app-sidenav>
+      </aside>
+      <div class="main">        
+        <router-outlet class="view"></router-outlet>
+      </div>
+    </div>
+  </div>

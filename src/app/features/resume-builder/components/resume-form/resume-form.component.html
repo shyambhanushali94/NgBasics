@@ -1,0 +1,53 @@
+<div class="form_container">
+{{resumeForm.value | json}}
+    <div class="form">
+        
+        <form [formGroup]="resumeForm" >
+            <div class="firstName">
+                <label for="firstName">Enter your First Name:</label>
+                <input type="text" placeholder="First Name" formControlName="firstName" id="firstName">
+            </div>
+            <div class="lastName">
+                <label for="lastName">Enter your Last Name:</label>
+                <input type="text" placeholder="Last Name" formControlName="lastName" id="lastName">
+                <!-- <div *ngIf="getValue.get('lastName')?.touched">
+                    <span class="text-danger"
+                        *ngIf="getValue.get('lastName')?.errors && getValue.get('lastName')?.errors?.['required']" style="color: red;">
+                        last-name required
+                    </span>
+                </div> -->
+            </div>
+            <div class="designation">
+                <label for="Designation">Enter your Designation</label>
+                <input type="text" placeholder="eg-Manager" formControlName="designation">
+            </div>
+            <div class="email">
+                <label for="email">Enter your Email:</label>
+                <input type="email" placeholder="Email" formControlName="email" id="email">
+            </div>
+            <div class="phoneNo">
+                <label for="phoneNo">Enter your Phone Number:</label>
+                <input type="number" placeholder="(000)(0000000)" formControlName="phoneNo" id="phoneNo">
+            </div>
+            <div class="technicalSkills">
+                <label for="technicalSkills">Enter your Technical Skills:</label>
+                <input type="text" id="technicalSkills" formControlName="technicalSkills" placeholder="Eg:CSS">
+            </div>
+            <div class="experience">
+                <label for="experience">Enter your Experience:</label>
+                <input type="text" id="experience" formControlName="experience" placeholder="Eg:2 years">
+            </div>
+            <div class="education">
+                <label for="education">Enter your Education:</label>
+                <input type="text" id="education" formControlName="education" >
+            </div>
+
+
+           
+            <button type="submit" class="btn btn-submit">Submit</button>
+            <!-- <button type="button" (click)="onReset()" class="btn btn-reset">reset</button> -->
+        </form>
+    
+    
+
+</div>

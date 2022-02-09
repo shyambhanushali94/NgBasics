@@ -1,0 +1,10 @@
+.form_container{
+margin: .75rem;
+padding: .7rem;
+}
+
+.firstName,.lastName,.email,.phoneNo,.technicalSkills,.experience,.education,.designation{
+    display: flex;
+   margin: 1rem;
+    justify-content: space-between;
+}

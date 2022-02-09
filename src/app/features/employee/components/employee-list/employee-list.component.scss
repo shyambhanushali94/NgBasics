@@ -1,0 +1,29 @@
+.list_container{
+    margin: .75rem;
+    padding: .75rem;
+    
+    .searchContainer{
+        display: flex;
+        justify-content: space-between;
+        
+    }
+}
+.employeeList{
+    text-align: center;
+}
+.btn{
+    padding: 5px 5px;
+    margin: 2px;
+    border-radius: 5px;
+border: 1px solid #8bb8d7;
+
+}
+.btn-info{
+   background-color: aquamarine;
+}
+.btn-danger{
+    background-color: rgb(255, 133, 133);
+}
+.cellSpacing{
+    padding:.25rem;
+}

@@ -4,7 +4,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 @Component({
   selector: 'app-reactive-demo',
   templateUrl: './reactive-demo.component.html',
-  styleUrls: ['./reactive-demo.component.css']
+  styleUrls: ['./reactive-demo.component.scss']
 })
 export class ReactiveDemoComponent implements OnInit {
 
