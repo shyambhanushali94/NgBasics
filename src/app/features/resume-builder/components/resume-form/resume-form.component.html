@@ -1,8 +1,8 @@
 <div class="form_container">
-{{resumeForm.value | json}}
+    {{resumeForm.value | json}}
     <div class="form">
-        
-        <form [formGroup]="resumeForm" >
+
+        <form [formGroup]="resumeForm">
             <div class="firstName">
                 <label for="firstName">Enter your First Name:</label>
                 <input type="text" placeholder="First Name" formControlName="firstName" id="firstName">
@@ -30,24 +30,38 @@
                 <input type="number" placeholder="(000)(0000000)" formControlName="phoneNo" id="phoneNo">
             </div>
             <div class="technicalSkills">
+
                 <label for="technicalSkills">Enter your Technical Skills:</label>
-                <input type="text" id="technicalSkills" formControlName="technicalSkills" placeholder="Eg:CSS">
+                <div  >
+                    
+                    <input type="text" id="technicalSkills" formControlName="technicalSkills" placeholder="Eg:CSS"
+                    formControlName="skills">
+                    
+                    <button (click)="addControlToArray()">Add Skills</button>
+                </div>
             </div>
+            <div class="additionalSkills">
+            <div class="flex-column" *ngFor="let skills of technicalSkills.controls; let i= index">
+                <input type="text" id="technicalSkills" formControlName="technicalSkills" placeholder="Eg:CSS"
+                    formControlName="skills">
+                <button (click)="technicalSkills.removeAt(i)">delete</button>
+            </div>
+        </div>
             <div class="experience">
                 <label for="experience">Enter your Experience:</label>
                 <input type="text" id="experience" formControlName="experience" placeholder="Eg:2 years">
             </div>
             <div class="education">
                 <label for="education">Enter your Education:</label>
-                <input type="text" id="education" formControlName="education" >
+                <input type="text" id="education" formControlName="education">
             </div>
 
 
-           
+
             <button type="submit" class="btn btn-submit">Submit</button>
             <!-- <button type="button" (click)="onReset()" class="btn btn-reset">reset</button> -->
         </form>
-    
-    
 
-</div>
+
+
+    </div>

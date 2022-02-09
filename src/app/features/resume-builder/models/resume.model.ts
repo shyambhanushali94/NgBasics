@@ -5,6 +5,20 @@ export interface ResumeData{
     email: string,
     phoneNo: string,
     technicalSkills: string,
-    experience: string,
-    education: number
+    experience: Experience,
+    education: Education
+}
+
+class Experience{
+    companyName:string;
+    designation:string;
+    description:string;
+    startYear:number;
+    endYear:number;
+    
+}
+class Education{
+    univercity:string;
+    course:string;
+    grade:number;
 }

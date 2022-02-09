@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-resume-form',
@@ -9,10 +9,20 @@ import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class ResumeFormComponent implements OnInit {
 
   resumeForm: FormGroup;
-  technicalSkills:FormArray;
-  experience:FormArray;
-  education:FormArray;
+  technicalSkills = new FormArray([]);
+  experience = new FormArray([]);
+  education = new FormArray([]);
+  
 
+
+
+addControlToArray(): void {
+    this.technicalSkills.push(new FormControl(''));
+  }
+
+  get skills(): FormArray{
+    return this.resumeForm.get("skills") as FormArray
+  }
   constructor(private resumeFormBuilder: FormBuilder,) { }
 
   ngOnInit(): void {
