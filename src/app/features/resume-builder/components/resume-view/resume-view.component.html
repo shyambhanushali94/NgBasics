@@ -56,9 +56,14 @@
                 <tr style="border-bottom: 2px solid #d8d8d8;">
                     <td class="sections" style="width: 200px;"><em>Technical</em></td>
                     <td  class="sections">
-                        <table >
-                            <tr style="border-bottom: 2px solid #d8d8d8;">
-                                <td style="width: 33.33%;">{{this.resumeData.technicalSkills}}</td>
+                        <div style="display: flex; width: 100%; flex-wrap: wrap;">
+                        <div style="width: 33.33%;" *ngFor="let skill of this.resumeData.technicalSkills">
+                            {{skill.skillName}}
+                        </div>
+                        </div>
+                        <!-- <table >
+                            <tr style="border-bottom: 2px solid #d8d8d8;" *ngFor="let skill of this.resumeData.technicalSkills">
+                                 <td style="width: 33.33%;">{{skill.skillName}}</td>
                                 <td style="width: 33.33%;">{{this.resumeData.technicalSkills}}</td>
                                 <td>{{this.resumeData.technicalSkills}}</td>
                             </tr>
@@ -68,43 +73,32 @@
                                 <td> </td>
                             </tr>
                             
-                        </table>
+                        </table> -->
                     </td>
                 </tr>
                 <tr style="border-bottom: 2px solid #d8d8d8;">
                     <td class="sections" style="width: 200px;"><em>Experience</em></td>
                     <td  >
                         <table>
-                            <tr style="border-bottom: 2px solid #d8d8d8;">
+                            <tr style="border-bottom: 2px solid #d8d8d8;" *ngFor="let exp of  this.resumeData.experience">
                                 <td  class="sections">
-                                    <h3>Facebook</h3>
-                                    <span style="display: block;">Senior Interface Designer</span>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus vero, enim ipsum
-                                        commodi pariatur animi voluptatum!</p>
+                                    <h3>{{exp.companyName}}</h3>
+                                    <span style="display: block;">{{exp.designation}}</span>
+                                    <p>{{exp.description}}</p>
                                 </td>
                                 <td class="sections" style="width: 100px;">
-                                    <p><b>{{this.resumeData.experience}}</b></p>
+                                    <p><b>{{exp.startYear}}-{{exp.endYear}}</b></p>
                                 </td>
                             </tr>
-                            <tr>
-                                <td  class="sections">
-                                    <h3>Apple Inc.</h3>
-                                    <span style="display: block;">Senior Interface Designer</span>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus vero, enim ipsum
-                                        commodi pariatur animi voluptatum!</p>
-                                </td>
-                                <td class="sections" style="width: 100px;">
-                                    <p><b>{{this.resumeData.experience}}</b></p>
-                                </td>
-                            </tr>
+                            
                         </table>
                     </td>
                 </tr>
-                <tr style="border-bottom: 2px solid #d8d8d8;">
+                <tr style="border-bottom: 2px solid #d8d8d8;"  *ngFor="let edu of  this.resumeData.education">
                     <td class="sections" style="width: 200px;"><em>Education</em></td>
                     <td>
-                        <h4>{{this.resumeData.education}}</h4>
-                        <h5>Dual Major - <b>4.0 GPA</b></h5>
+                        <h4>{{edu.university}}</h4>
+                        <h5>{{edu.course}} - <b>{{edu.grade}} GPA</b></h5>
                     </td>
 
                 </tr>

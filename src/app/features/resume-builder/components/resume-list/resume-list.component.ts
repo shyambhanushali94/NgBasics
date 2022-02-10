@@ -11,7 +11,7 @@ import { ResumeService } from '../../services/resume.service';
 export class ResumeListComponent implements OnInit {
   public resumeDetailLists: ResumeData[];
 
-  constructor(private resumeService: ResumeService, route:Router) { }
+  constructor(private resumeService: ResumeService, private route: Router) { }
 
   ngOnInit(): void {
     this.getLists();
@@ -20,5 +20,9 @@ export class ResumeListComponent implements OnInit {
     this.resumeService.getResumeList().subscribe((res: ResumeData[]) => {
       this.resumeDetailLists = res;
     })
-}
+  }
+
+  viewResume(id: number) {
+    this.route.navigate([`/resume/resume-view/${id}`]);
+  }
 }

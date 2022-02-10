@@ -1,20 +1,43 @@
 .form_container{
 margin: .75rem;
 padding: .7rem;
+.form{
+    display:flex;
+    color: #2c4d53;
+        display: flex;
+        // flex-direction: column;
+        justify-content: space-between;
+               align-items: center;
+               overflow: auto;
+               
+}
 }
 
-.firstName,.lastName,.email,.phoneNo,.technicalSkills,.experience,.education,.designation{
+.firstName,.lastName,.email,.phoneNo,.education,.designation,.experience{
     display: flex;
    margin: 1rem;
     justify-content: space-between;
     
 }
-.additionalSkills{
+.additionalSkills,.additionalExperience,.defaultExperience,.defaultEducation,.experience,.technicalSkills{
 margin: 1rem;
 }
 .flex-column{
     display: flex;
     justify-content: end;
-    margin-top: 1rem;
-    
-}
+    margin: 1rem;
+    }
+    .skill{
+        padding-bottom: 1rem;
+    }
+   
+
+    .cellSpacing{
+        padding: 0.25rem;
+    }
+    input{
+        width: 200px;
+    }
+    .margin-top{
+        margin-top: 1rem;
+    }

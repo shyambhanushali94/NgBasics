@@ -19,8 +19,11 @@ export class ResumeService {
   getResumeInfo(id: number): Observable<ResumeData> {
     return this.http.get<ResumeData>(`${this.apiLink}/ResumeData/${id}`);
   }
-  addEmployee(resumesList: ResumeData): Observable<ResumeData> {
-    return this.http.post<ResumeData>(`${this.apiLink}/ResumeData`, resumesList);
-  }
+ 
+
+  addResumeData(resumeData:ResumeData): Observable<ResumeData>{
+    return this.http.post<ResumeData>(`${this.apiLink}/ResumeData`,resumeData)
+  } 
+
 }
 

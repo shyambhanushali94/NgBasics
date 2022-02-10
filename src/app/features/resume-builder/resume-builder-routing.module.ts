@@ -19,7 +19,7 @@ const routes: Routes = [
         path: 'resume-list', component: ResumeListComponent
       },
       {
-        path: 'resume-view', component: ResumeViewComponent
+        path: 'resume-view/:id', component: ResumeViewComponent
       },
       {
         path: 'resume-form', component: ResumeFormComponent

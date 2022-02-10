@@ -45,16 +45,16 @@
     .sidenav{
         width: 300px;
         background-color: #ffffff;
-        border-top-left-radius: 50px;
-        border-bottom-left-radius: 50px;
+        // border-top-left-radius: 50px;
+        // border-bottom-left-radius: 50px;
         border-right :2px solid #8bb8d7;
         overflow: auto;
     }
     .main{
         flex-grow: 1;
         background-color: #d3f7fa;
-        border-top-right-radius: 50px;
-        border-bottom-right-radius: 50px;
+        // border-top-right-radius: 50px;
+        // border-bottom-right-radius: 50px;
         overflow: auto;
         display: flex;
         justify-content: center;

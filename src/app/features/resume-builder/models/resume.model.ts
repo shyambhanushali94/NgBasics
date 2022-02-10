@@ -2,11 +2,16 @@ export interface ResumeData{
     id:number,
     firstName: string,
     lastName: string,
+    designation:string,
     email: string,
     phoneNo: string,
-    technicalSkills: string,
-    experience: Experience,
-    education: Education
+    technicalSkills: TechnicalSkills[],
+    experience: Experience[],
+    education: Education[]
+}
+
+class TechnicalSkills{
+    skillName:string
 }
 
 class Experience{
@@ -18,7 +23,7 @@ class Experience{
     
 }
 class Education{
-    univercity:string;
+    university:string;
     course:string;
     grade:number;
 }
