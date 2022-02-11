@@ -18,9 +18,11 @@ export class ResumeViewComponent implements OnInit {
     this.activatedRoute.snapshot.params['id'];
     this.getResumeData(this.activatedRoute.snapshot.params['id']);
   }
-getResumeData(id: number){
-  this.resumeService.getResumeInfo(id).subscribe((res: ResumeData) => {
-    this.resumeData = res;
-  })
-}
+  getResumeData(id: number) {
+    this.resumeService.getResumeInfo(id).subscribe((res: ResumeData) => {
+
+      this.resumeData = res;
+
+    })
+  }
 }

@@ -25,9 +25,11 @@ export class EmployeeFormComponent implements OnInit {
     this.getDepartmentData();
   
     const id = parseInt(this.activatedRoute.snapshot.params['id']);
-    this.buildForm();
+   
     if(id){
       this.editEmployee(id);
+    } else {
+      this.buildForm();
     }
 
   }
@@ -45,13 +47,14 @@ export class EmployeeFormComponent implements OnInit {
   }
 
   getDepartmentData() {
-    this.employeeService.getDepartment().subscribe((res: Department[]) => {
+    this.employeeService.getDepartments().subscribe((res: Department[]) => {
       this.departmentDetails = res;      
     })
 
   }
 
   saveEmployee(id?: number) {
+    
     if(id) {
       this.updateEmployee(id);
     } else {
@@ -74,9 +77,7 @@ export class EmployeeFormComponent implements OnInit {
   }
 
   public updateEmployee(id: number) {
-    const newEmployeeData = this.employeeForm.value;
-    newEmployeeData.id = this.empToEdit;
-    this.employeeService.editEmployee(newEmployeeData).subscribe((res: Employee) => {
+    this.employeeService.editEmployee(id, this.employeeForm.value).subscribe((res: Employee) => {
       this.router.navigateByUrl('/employee/employee-list')
     })
   }

@@ -3,141 +3,162 @@
     <div class="form">
 
         <form [formGroup]="resumeForm">
-            <div class="firstName">
-                <label for="firstName">Enter your First Name:</label>
-                <input type="text" placeholder="Enter:First Name" formControlName="firstName" id="firstName">
-            </div>
-            <div class="lastName">
-                <label for="lastName">Enter your Last Name:</label>
-                <input type="text" placeholder="Enter:Last Name" formControlName="lastName" id="lastName">
-            </div>
-            <div class="designation">
-                <label for="Designation">Enter your Designation</label>
-                <input type="text" placeholder="Enter: Designation" formControlName="designation">
-            </div>
-            <div class="email">
-                <label for="email">Enter your Email:</label>
-                <input type="email" placeholder="Enter:Email" formControlName="email" id="email">
-            </div>
-            <div class="phoneNo">
-                <label for="phoneNo">Enter your Phone Number:</label>
-                <input type="number" placeholder="(000)(0000000)" formControlName="phoneNo" id="phoneNo">
-            </div>
+            <div class="personalInfo">
+                <div class="firstName">
+                    <label for="firstName">Enter your First Name:</label>
+                    <input type="text" placeholder="Enter:First Name" formControlName="firstName" id="firstName">
+                </div>
+                <div>
+                    <div *ngIf="getFormControl('firstName')?.invalid && (getFormControl('firstName')?.dirty || getFormControl('firstName')?.touched)"
+                        class="alert alert-danger" style="color: red;">
 
-            <!-- technicalSkills -->
-            <div class="technicalSkills">
-
-                <label for="technicalSkills">Enter your Technical Skills:</label>
-                <!-- <div class="defaultTechnicalSkill">
-
-                    <input type="text" id="technicalSkills" placeholder="Enter:skill" formControlName="skill">
-
-                </div> -->
-                <button (click)="addTechnicalSkill()">
-                    +</button>
-                <div formArrayName="technicalSkills">
-                    <div class="defaultEducation">
-                        <div class="skill" *ngFor="let skill of technicalSkillsArray['controls']; let i = index"
-                            [formGroupName]="i">
-                            <input type="text" placeholder="Enter:skill" formControlName="skillName">
-
-                            <button (click)="deleteTechnicalSkill(i)">-</button>
+                        <div class="small" *ngIf="getFormControl('firstName')?.errors?.['required']">
+                            required
+                        </div>
+                        <div *ngIf="getFormControl('firstName')?.errors?.['minlength']">
+                            Name must be at least 4 characters long.
+                        </div>
+                        <div *ngIf="getFormControl('firstName')?.errors?.['maxlength']">
+                            Name must be at least 8 characters long.
                         </div>
                     </div>
+                    <div class="lastName">
+                        <label for="lastName">Enter your Last Name:</label>
+                        <input type="text" placeholder="Enter:Last Name" formControlName="lastName" id="lastName">
+                    </div>
+                    <div class="designation">
+                        <label for="Designation">Enter your Designation</label>
+                        <input type="text" placeholder="Enter: Designation" formControlName="designation">
+                    </div>
+                    <div class="email">
+                        <label for="email">Enter your Email:</label>
+                        <input type="email" placeholder="Enter:Email" formControlName="email" id="email">
+                    </div>
+                    <div class="phoneNo">
+                        <label for="phoneNo">Enter your Phone Number:</label>
+                        <input type="number" placeholder="(000)(0000000)" formControlName="phoneNo" id="phoneNo">
+                    </div>
+
+                    <!-- technicalSkills -->
+                    <div class="technicalSkills">
+
+                        <label for="technicalSkills">Enter your Technical Skills:</label>
+
+                        <button (click)="addTechnicalSkill()">
+                            +</button>
+                        <div formArrayName="technicalSkills">
+                            <div class="defaultEducation">
+                                <div class="skill" *ngFor="let skill of technicalSkillsArray['controls']; let i = index"
+                                    [formGroupName]="i">
+                                    <input type="text" placeholder="Enter:skill" formControlName="skillName">
+                                    <button (click)="deleteTechnicalSkill(i)">-</button>
+                                    <div *ngIf="getAsFormGroup(skill).controls['skillName'].touched">
+                                    *required
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- technicalSkills -->
                 </div>
+                <!-- experience -->
+                <div class="experience">
+                    <label for="experience">Enter your Experience:</label>
+                </div>
+                <div class="defaultExperience">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="cellSpacing">
+                                    <label for="companyName">Company Name</label>
+                                </th>
+                                <th class="cellSpacing">
+                                    <label for="designation">Designation</label>
+                                </th>
+                                <th class="cellSpacing">
+                                    <label for="description">Description</label>
+                                </th>
+                                <th class="cellSpacing">
+                                    <label for="startYear">Start Year</label>
+                                </th>
+                                <th class="cellSpacing">
+                                    <label for="endYear">End Year</label>
+                                </th>
+                                <th>
+                                    <button type="button" (click)="addExperience()">+</button>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody formArrayName="experience">
+
+                            <tr *ngFor="let skill of experienceArray['controls']; let i = index" [formGroupName]="i">
+                                <!--  ng for-->
+                                <td class="cellSpacing"><input type="text" id="companyName"
+                                        formControlName="companyName" placeholder="Enter:companyName">
+                                </td>
+                                <td class="cellSpacing"><input type="text" id="designation"
+                                        formControlName="designation" placeholder="Enter:designation">
+                                </td>
+                                <td class="cellSpacing"><input type="text" id="description"
+                                        formControlName="description" placeholder="Enter:description">
+                                </td>
+                                <td class="cellSpacing"><input type="number" id="startYear" formControlName="startYear"
+                                        placeholder="Enter:start year">
+                                </td>
+                                <td class="cellSpacing"><input type="number" id="endYear" formControlName="endYear"
+                                        placeholder="Enter:end Year"></td>
+                                <td class="cellSpacing"><button type="button" (click)="deleteExperience(i)">-</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+
+
+
+                <!-- experience -->
+                <div class="education">
+                    <label for="education">Enter your Education:</label>
+
+                </div>
+                <div class="defaultEducation">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="cellSpacing"><label for="university">University</label></th>
+                                <th class="cellSpacing"><label for="course">Course</label></th>
+                                <th class="cellSpacing"><label for="grade">Grade</label></th>
+                                <th>
+                                    <button type="button" (click)="addEucation()">+</button>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody formArrayName="education">
+                            <tr *ngFor="let education of this.educationArray['controls'];  let i = index"
+                                [formGroupName]="i">
+                                <!-- ng for  -->
+                                <td class="cellSpacing"><input type="text" formControlName="university"
+                                        placeholder="Enter University" id="university">
+                                </td>
+                                <td class="cellSpacing"><input type="text" formControlName="course"
+                                        placeholder="Enter cource" id="course"></td>
+                                <td class="cellSpacing"><input type="number" formControlName="grade"
+                                        placeholder="Enter grade" id="grade"></td>
+                                <td><button type="button" (click)="deleteEducation(i)">-</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+
+                <button type="submit" class="btn btn-submit" (click)="postResumeData()"
+                    routerLink="/resume/resume-list">Submit</button>
+                <!-- <button type="button" (click)="onReset()" class="btn btn-reset">reset</button> -->
             </div>
-            <!-- technicalSkills -->
-
-            <!-- experience -->
-            <div class="experience">
-                <label for="experience">Enter your Experience:</label>
-            </div>
-            <div class="defaultExperience">
-                <table>
-                    <thead>
-                        <tr>
-                            <th class="cellSpacing">
-                                <label for="companyName">Company Name</label>
-                            </th>
-                            <th class="cellSpacing">
-                                <label for="designation">Designation</label>
-                            </th>
-                            <th class="cellSpacing">
-                                <label for="description">Description</label>
-                            </th>
-                            <th class="cellSpacing">
-                                <label for="startYear">Start Year</label>
-                            </th>
-                            <th class="cellSpacing">
-                                <label for="endYear">End Year</label>
-                            </th>
-                            <th>
-                                <button type="button" (click)="addExperience()">+</button>
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody formArrayName="experience">
-
-                        <tr *ngFor="let skill of experienceArray['controls']; let i = index" [formGroupName]="i">
-                            <!--  ng for-->
-                            <td class="cellSpacing"><input type="text" id="companyName" formControlName="companyName"
-                                    placeholder="Enter:companyName">
-                            </td>
-                            <td class="cellSpacing"><input type="text" id="designation" formControlName="designation"
-                                    placeholder="Enter:designation">
-                            </td>
-                            <td class="cellSpacing"><input type="text" id="description" formControlName="description"
-                                    placeholder="Enter:description">
-                            </td>
-                            <td class="cellSpacing"><input type="number" id="startYear" formControlName="startYear"
-                                    placeholder="Enter:start year">
-                            </td>
-                            <td class="cellSpacing"><input type="number" id="endYear" formControlName="endYear"
-                                    placeholder="Enter:end Year"></td>
-                            <td class="cellSpacing"><button type="button" (click)="deleteExperience(i)">-</button></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-
-
-
-
-            <!-- experience -->
-            <div class="education">
-                <label for="education">Enter your Education:</label>
-
-            </div>
-            <div class="defaultEducation">
-                <table>
-                    <thead>
-                        <tr>
-                            <th class="cellSpacing"><label for="university">University</label></th>
-                            <th class="cellSpacing"><label for="course">Course</label></th>
-                            <th class="cellSpacing"><label for="grade">Grade</label></th>
-                            <th>
-                                <button type="button" (click)="addEucation()">+</button>
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody formArrayName="education">
-                        <tr *ngFor="let education of this.educationArray['controls'];  let i = index" [formGroupName]="i">
-                            <!-- ng for  -->
-                            <td class="cellSpacing"><input type="text" formControlName="university" placeholder="Enter University" id="university">
-                            </td>
-                            <td class="cellSpacing"><input type="text"  formControlName="course" placeholder="Enter cource" id="course"></td>
-                            <td class="cellSpacing"><input type="number" formControlName="grade" placeholder="Enter grade" id="grade"></td>
-                            <td><button type="button" (click)="deleteEducation(i)">-</button></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-
-
-            <button type="submit" class="btn btn-submit" (click)="postResumeData()" routerLink="/resume/resume-list">Submit</button>
-            <!-- <button type="button" (click)="onReset()" class="btn btn-reset">reset</button> -->
         </form>
 
 

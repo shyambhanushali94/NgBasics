@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { AbstractControl, FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { ResumeData } from '../../models/resume.model';
 import { ResumeService } from '../../services/resume.service';
@@ -11,26 +11,16 @@ import { ResumeService } from '../../services/resume.service';
 })
 export class ResumeFormComponent implements OnInit {
 
-  // education = new FormArray([]);
-  // technicalSkillsArray = new FormArray([]);
+
 
 
   resumeForm: FormGroup;
   technicalSkillsArray: FormArray = this.resumeFormBuilder.array([]);
   experienceArray: FormArray = this.resumeFormBuilder.array([]);
   educationArray: FormArray = this.resumeFormBuilder.array([]);
-  // xyz:FormArray;
 
 
-
-
-  // addControlToArray(): void {
-  //     this.technicalSkillsArray.push(new FormControl(''));
-  //   }
-
-
-
-  constructor(private resumeFormBuilder: FormBuilder, private resumeService:ResumeService) { }
+  constructor(private resumeFormBuilder: FormBuilder, private resumeService: ResumeService) { }
 
   ngOnInit(): void {
     this.resumebuildForm();
@@ -41,7 +31,7 @@ export class ResumeFormComponent implements OnInit {
 
   public resumebuildForm() {
     this.resumeForm = this.resumeFormBuilder.group({
-      firstName: ['', Validators.required],
+      firstName: ['', [Validators.required, Validators.minLength(4),Validators.maxLength(8)]],
       lastName: ['', Validators.required],
       designation: [''],
       email: ['', Validators.required],
@@ -96,22 +86,30 @@ export class ResumeFormComponent implements OnInit {
     })
   }
 
-  addEucation(){
+  addEucation() {
     this.educationArray.push(this.createEducationGroup());
   }
 
-  deleteEducation(index:number){
-    if(this.educationArray.length !=1) this.educationArray.removeAt(index);
+  deleteEducation(index: number) {
+    if (this.educationArray.length != 1) this.educationArray.removeAt(index);
   }
 
-  public postResumeData(){
+  public postResumeData() {
     const resumeData = this.resumeForm.value
-    this.resumeService.addResumeData(resumeData).subscribe((res: ResumeData) =>{
-    alert("data added")
-    
+    this.resumeService.addResumeData(resumeData).subscribe((res: ResumeData) => {
+      alert("data added")
+
     })
   }
+//common getter function
+getFormControl(controlName:string): FormGroup { 
+  return this.resumeForm.get(controlName) as FormGroup
+}
+
+getAsFormGroup(abstractControl: AbstractControl): FormGroup {
+  return abstractControl as FormGroup;
+}
 
 
-  
+
 }

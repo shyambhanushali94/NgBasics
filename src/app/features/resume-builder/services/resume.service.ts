@@ -25,5 +25,9 @@ export class ResumeService {
     return this.http.post<ResumeData>(`${this.apiLink}/ResumeData`,resumeData)
   } 
 
+  deleteResume(id:number):Observable<ResumeData>{
+    return this.http.delete<ResumeData>(`${this.apiLink}/ResumeData/${id}`);
+  }
+
 }
 

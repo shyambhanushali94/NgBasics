@@ -15,250 +15,45 @@
   ],
   "Employee": [
     {
-      "firstname": "hiren",
-      "lastname": "tandel",
-      "email": "as@ds.com",
-      "phoneNo": 9876543211,
-      "dateOfEmployment": "2022-02-17",
-      "gender": "male",
-      "department": "1",
-      "id": 1
-    },
-    {
-      "firstname": "hiren",
-      "lastname": "tabderl",
-      "email": "as@ds.com",
-      "phoneNo": 9876543211,
-      "dateOfEmployment": "2022-02-17",
-      "gender": "male",
-      "department": "2",
-      "id": 2
-    },
-    {
-      "firstname": "tanmay",
-      "lastname": "Bhatt",
-      "email": "t@b.com",
-      "phoneNo": 8976543211,
-      "dateOfEmployment": "2022-02-26",
-      "gender": "male",
-      "department": "1",
-      "id": 3
-    },
-    {
-      "firstname": "aa",
-      "lastname": "aaa",
-      "email": "aa@aa",
-      "phoneNo": 9876543211,
-      "dateOfEmployment": "2022-02-20",
-      "gender": "male",
-      "department": "1",
-      "id": 4
-    },
-    {
       "firstname": "asd",
       "lastname": "asd",
-      "email": "asd@aa.com",
-      "phoneNo": 9884848942,
-      "dateOfEmployment": "2022-02-04",
+      "email": "as@ds.com",
+      "phoneNo": null,
+      "dateOfEmployment": "2022-02-16",
       "gender": "female",
-      "department": "1",
-      "id": 5
+      "department": "2",
+      "id": 1
     }
   ],
   "ResumeData": [
     {
-      "firstName": "jigar",
-      "lastName": "bhanushali",
-      "designation": "haha",
-      "email": "GAGA",
-      "phoneNo": null,
+      "firstName": "as",
+      "lastName": "123",
+      "designation": "",
+      "email": "as@ds.com",
+      "phoneNo": "",
       "technicalSkills": [
         {
-          "skillName": "AS"
-        },
-        {
-          "skillName": "DS"
+          "skillName": ""
         }
       ],
       "experience": [
         {
-          "companyName": "ASD",
-          "designation": "ASD",
-          "description": "ASD",
-          "startYear": 54,
-          "endYear": 5
+          "companyName": "",
+          "designation": "",
+          "description": "",
+          "startYear": "",
+          "endYear": ""
         }
       ],
       "education": [
         {
-          "university": "31",
-          "course": "323",
-          "grade": 33
+          "university": "",
+          "course": "",
+          "grade": ""
         }
       ],
       "id": 1
-    },
-    {
-      "firstName": "654",
-      "lastName": "654",
-      "designation": "654",
-      "email": "654",
-      "phoneNo": 654,
-      "technicalSkills": [
-        {
-          "skillName": "645"
-        }
-      ],
-      "experience": [
-        {
-          "companyName": "654",
-          "designation": "654",
-          "description": "654",
-          "startYear": 654,
-          "endYear": 654
-        }
-      ],
-      "education": [
-        {
-          "university": "654",
-          "course": "654",
-          "grade": 645
-        }
-      ],
-      "id": 2
-    },
-    {
-      "firstName": "321",
-      "lastName": "321",
-      "designation": "321",
-      "email": "321",
-      "phoneNo": 321,
-      "technicalSkills": [
-        {
-          "skillName": "321"
-        }
-      ],
-      "experience": [
-        {
-          "companyName": "13",
-          "designation": "21321",
-          "description": "321",
-          "startYear": 321,
-          "endYear": 321
-        },
-        {
-          "companyName": "0203",
-          "designation": "321",
-          "description": "321",
-          "startYear": 321,
-          "endYear": 321
-        }
-      ],
-      "education": [
-        {
-          "university": "321",
-          "course": "321",
-          "grade": 321
-        }
-      ],
-      "id": 3
-    },
-    {
-      "firstName": "",
-      "lastName": "",
-      "designation": "",
-      "email": "",
-      "phoneNo": "",
-      "technicalSkills": [
-        {
-          "skillName": "1"
-        },
-        {
-          "skillName": "2"
-        },
-        {
-          "skillName": "3"
-        },
-        {
-          "skillName": "4"
-        }
-      ],
-      "experience": [
-        {
-          "companyName": "",
-          "designation": "",
-          "description": "",
-          "startYear": "",
-          "endYear": ""
-        }
-      ],
-      "education": [
-        {
-          "university": "",
-          "course": "",
-          "grade": ""
-        }
-      ],
-      "id": 4
-    },
-    {
-      "firstName": "",
-      "lastName": "",
-      "designation": "",
-      "email": "",
-      "phoneNo": "",
-      "technicalSkills": [
-        {
-          "skillName": "1"
-        },
-        {
-          "skillName": "2"
-        },
-        {
-          "skillName": "3"
-        },
-        {
-          "skillName": "4"
-        },
-        {
-          "skillName": "5"
-        },
-        {
-          "skillName": "6"
-        },
-        {
-          "skillName": "7"
-        },
-        {
-          "skillName": "8"
-        },
-        {
-          "skillName": "9"
-        },
-        {
-          "skillName": "10"
-        },
-        {
-          "skillName": "11"
-        }
-      ],
-      "experience": [
-        {
-          "companyName": "",
-          "designation": "",
-          "description": "",
-          "startYear": "",
-          "endYear": ""
-        }
-      ],
-      "education": [
-        {
-          "university": "",
-          "course": "",
-          "grade": ""
-        }
-      ],
-      "id": 5
     }
   ]
 }

@@ -1,11 +1,11 @@
-<div class="form_container">
+<div class="form_container" >
 
     <div class="container">
         <header style="border-bottom: 2px solid #d8d8d8; margin: auto;">
             <table class="sections">
                 <tr>
                     <td>
-                        <h1>{{ this.resumeData.firstName + ' ' + this.resumeData.lastName }}</h1>
+                        <h1>{{ this.resumeData?.firstName + ' ' + this.resumeData?.lastName }}</h1>
                         <em>
                             <!-- {{this.resumeData.}} -->
                             
@@ -13,8 +13,8 @@
                     </td>
                     <td style="width: 200px;">
                         <button>DOWNLOAD PDF</button>
-                        <b><a href="mailto:name@yourdomain.com" style="color: #fe2323; ">{{this.resumeData.email}}</a></b><br>
-                        <b>{{this.resumeData.phoneNo}}</b>
+                        <b><a href="mailto:name@yourdomain.com" style="color: #fe2323; ">{{this.resumeData?.email}}</a></b><br>
+                        <b>{{this.resumeData?.phoneNo}}</b>
                     </td>
                 </tr>
             </table>
@@ -57,8 +57,8 @@
                     <td class="sections" style="width: 200px;"><em>Technical</em></td>
                     <td  class="sections">
                         <div style="display: flex; width: 100%; flex-wrap: wrap;">
-                        <div style="width: 33.33%;" *ngFor="let skill of this.resumeData.technicalSkills">
-                            {{skill.skillName}}
+                        <div style="width: 33.33%;" *ngFor="let skill of this.resumeData?.technicalSkills">
+                            {{skill?.skillName}}
                         </div>
                         </div>
                         <!-- <table >
@@ -80,7 +80,7 @@
                     <td class="sections" style="width: 200px;"><em>Experience</em></td>
                     <td  >
                         <table>
-                            <tr style="border-bottom: 2px solid #d8d8d8;" *ngFor="let exp of  this.resumeData.experience">
+                            <tr style="border-bottom: 2px solid #d8d8d8;" *ngFor="let exp of  this.resumeData?.experience">
                                 <td  class="sections">
                                     <h3>{{exp.companyName}}</h3>
                                     <span style="display: block;">{{exp.designation}}</span>
@@ -94,7 +94,7 @@
                         </table>
                     </td>
                 </tr>
-                <tr style="border-bottom: 2px solid #d8d8d8;"  *ngFor="let edu of  this.resumeData.education">
+                <tr style="border-bottom: 2px solid #d8d8d8;"  *ngFor="let edu of  this.resumeData?.education">
                     <td class="sections" style="width: 200px;"><em>Education</em></td>
                     <td>
                         <h4>{{edu.university}}</h4>
@@ -105,8 +105,8 @@
             </table>
         </section>
         <footer   style="text-align: center; padding-bottom: 30px;">
-            <div style="width: 100%;">{{this.resumeData.firstName + ' ' + this.resumeData.lastName }} - <a href="mailto:name@yourdomain.com"
-                    style="color: #fe2323;">{{this.resumeData.email}}</a> - {{this.resumeData.phoneNo}}</div>
+            <div style="width: 100%;">{{this.resumeData?.firstName + ' ' + this.resumeData?.lastName }} - <a href="mailto:name@yourdomain.com"
+                    style="color: #fe2323;">{{this.resumeData?.email}}</a> - {{this.resumeData?.phoneNo}}</div>
         </footer>
     </div>
 

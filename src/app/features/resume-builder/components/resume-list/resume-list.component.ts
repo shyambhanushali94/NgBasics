@@ -14,9 +14,9 @@ export class ResumeListComponent implements OnInit {
   constructor(private resumeService: ResumeService, private route: Router) { }
 
   ngOnInit(): void {
-    this.getLists();
+    this.getResumeList();
   }
-  getLists() {
+  getResumeList() {
     this.resumeService.getResumeList().subscribe((res: ResumeData[]) => {
       this.resumeDetailLists = res;
     })
@@ -24,5 +24,11 @@ export class ResumeListComponent implements OnInit {
 
   viewResume(id: number) {
     this.route.navigate([`/resume/resume-view/${id}`]);
+  }
+
+  deleteResume(id: number){
+    this.resumeService.deleteResume(id).subscribe((res) =>{
+      this.getResumeList();
+    })
   }
 }

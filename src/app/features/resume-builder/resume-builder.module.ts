@@ -7,6 +7,7 @@ import { ResumeBuilderComponent } from './resume-builder.component';
 import { ResumeListComponent } from './components/resume-list/resume-list.component';
 import { ResumeFormComponent } from './components/resume-form/resume-form.component';
 import { ResumeViewComponent } from './components/resume-view/resume-view.component';
+import { CoreModule } from 'src/app/core/core.module';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { ResumeViewComponent } from './components/resume-view/resume-view.compon
   imports: [
     CommonModule,
     ResumeBuilderRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CoreModule
   ]
 })
 export class ResumeBuilderModule { }

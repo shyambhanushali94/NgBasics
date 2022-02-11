@@ -17,19 +17,19 @@ export class EmployeeService {
     return this.http.get<Employee>(`${this.apiLink}/Employee/${id}`);
   }
 
-  getEmployee(): Observable<Employee[]> {
+  getEmployees(): Observable<Employee[]> {
     return this.http.get<Employee[]>(`${this.apiLink}/Employee`);
   }
 
-  getDepartment(): Observable<Department[]> {
+  getDepartments(): Observable<Department[]> {
     return this.http.get<Department[]>(`${this.apiLink}/Department`);
   }
 
   addEmployee(employee:Employee): Observable<Employee> {
     return this.http.post<Employee>(`${this.apiLink}/Employee`,employee);
   }
-  editEmployee(employee:Employee): Observable<Employee> {
-    return this.http.put<Employee>(`${this.apiLink}/Employee/${employee.id}`,employee);
+  editEmployee(id:number,employee:Employee): Observable<Employee> {
+    return this.http.put<Employee>(`${this.apiLink}/Employee/${id}`,employee);
   }
   deleteEmployee(id:number): Observable<Employee> {
     return this.http.delete<Employee>(`${this.apiLink}/Employee/${id}`);
