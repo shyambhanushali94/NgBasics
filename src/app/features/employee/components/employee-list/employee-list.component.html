@@ -31,7 +31,7 @@
                 <td class="cellSpacing">{{employee.department | idToName : departments}}</td>
                 <td class="cellSpacing"><button class="btn btn-info btnSize"
                         (click)="editEmployee(employee.id)">Edit</button>
-                    <button class="btn btn-danger " (click)="deleteEmployee(employee.id)">Delete</button>
+                    <button class="btn btn-danger " type="button" (click)="deleteEmployee(employee.id)">Delete</button>
                 </td>
             </tr>
         </tbody>

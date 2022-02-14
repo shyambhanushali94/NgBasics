@@ -23,6 +23,36 @@
       "gender": "female",
       "department": "2",
       "id": 1
+    },
+    {
+      "firstname": "",
+      "lastname": "",
+      "email": "",
+      "phoneNo": "",
+      "dateOfEmployment": "",
+      "gender": "",
+      "department": "",
+      "id": 2
+    },
+    {
+      "firstname": "",
+      "lastname": "",
+      "email": "",
+      "phoneNo": "",
+      "dateOfEmployment": "",
+      "gender": "",
+      "department": "",
+      "id": 3
+    },
+    {
+      "firstname": "",
+      "lastname": "",
+      "email": "a",
+      "phoneNo": "",
+      "dateOfEmployment": "",
+      "gender": "",
+      "department": "",
+      "id": 4
     }
   ],
   "ResumeData": [
@@ -54,6 +84,90 @@
         }
       ],
       "id": 1
+    }
+  ],
+  "UserDetails": [
+    {
+      "id": 31,
+      "firstName": "",
+      "lastName": "",
+      "email": "",
+      "phoneNo": "",
+      "clientName": "",
+      "office": ""
+    },
+    {
+      "id": 32,
+      "firstName": "",
+      "lastName": "",
+      "email": "",
+      "phoneNo": "",
+      "clientName": "",
+      "office": ""
+    },
+    {
+      "id": 33,
+      "firstName": "",
+      "lastName": "",
+      "email": "",
+      "phoneNo": "",
+      "clientName": "",
+      "office": ""
+    },
+    {
+      "id": 34,
+      "firstName": "",
+      "lastName": "",
+      "email": "",
+      "phoneNo": "",
+      "clientName": "",
+      "office": ""
+    },
+    {
+      "id": 35,
+      "firstName": "",
+      "lastName": "",
+      "email": "",
+      "phoneNo": "",
+      "clientName": "",
+      "office": ""
+    },
+    {
+      "id": 36,
+      "firstName": "sss",
+      "lastName": "",
+      "email": "",
+      "phoneNo": "",
+      "clientName": "",
+      "office": ""
+    }
+  ],
+  "Offices": [
+    {
+      "id": 1,
+      "name": "Office1"
+    },
+    {
+      "id": 2,
+      "name": "Office2"
+    },
+    {
+      "id": 3,
+      "name": "Office3"
+    }
+  ],
+  "ClientName": [
+    {
+      "id": 1,
+      "name": "Apple"
+    },
+    {
+      "id": 2,
+      "name": "JBL"
+    },
+    {
+      "id": 3,
+      "name": "1Rivet"
     }
   ]
 }

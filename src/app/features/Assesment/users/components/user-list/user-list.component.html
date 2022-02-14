@@ -1,0 +1,38 @@
+<div class="list_container">
+    <div class="searchContainer">
+
+
+    </div>
+    <table class="userList">
+        <thead>
+            <tr>
+                
+                <th class="cellSpacing">First Name</th>
+                <th class="cellSpacing">Last Name</th>
+                <th class="cellSpacing">Client Name</th>
+                <th class="cellSpacing">Email</th>
+                <th class="cellSpacing">Office</th>
+                <th class="cellSpacing">Contact Number</th>
+                <th class="cellSpacing">Action</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <tr *ngFor="let user of userDetails">
+                <td class="cellSpacing">{{user.firstName}}</td>
+                <td class="cellSpacing">{{user.lastName}}</td>
+                <td class="cellSpacing">{{user.clientName}}</td>
+                <td class="cellSpacing">{{user.email}}</td>
+                <td class="cellSpacing">{{user.office}}</td>
+                <td class="cellSpacing">{{user.phoneNo}}</td>
+                <td class="cellSpacing">
+                    <button class="btn btn-info btnSize" >Edit</button>
+                       
+                    <button class="btn btn-danger " type="button" (click)="deleteUser(user.id)">Delete</button>
+                    <!-- <button class="btn btn-danger " type="button" >Delete</button> -->
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
