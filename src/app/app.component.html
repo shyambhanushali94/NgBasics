@@ -1,18 +1,14 @@
-<!-- <app-header></app-header> -->
-<!-- <div class="d-flex">
-  
-<app-sidenav class="sidenav"></app-sidenav>
-<div class="main-display"><router-outlet></router-outlet></div>
-</div> -->
-<!-- <app-footer class="footer"></app-footer> -->
 
 
-
-<div class="wrapper d-flex">
-  <aside class="sidenav">
+<div class="wrapper">
+  <label for="toogleCheckBox"><span class="icon-menu"></span></label>
+  <input type="checkbox" id="toogleCheckBox">
+  <div class="sidenav">
     <app-sidenav></app-sidenav>
-  </aside>
+  </div>
   <div class="main">
+
+    
     <router-outlet></router-outlet>
   </div>
 </div>

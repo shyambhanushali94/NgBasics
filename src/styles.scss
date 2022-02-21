@@ -1,16 +1,133 @@
 /* You can add global styles to this file, and also import other style files */
-/* You can add global styles to this file, and also import other style files */
-html,body{
-    height: 100%;
+@import "./assets/scss/scrollbar";
+* {
+  font-size: 1.125rem;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border-collapse: collapse;
+  font-family: "Poppins", sans-serif;
 }
-*{  font-size: 1.125rem;
-    margin: 0;
-    padding: 0;
+html,
+body {
+  height: 100%;
 }
-body{
-     overflow: hidden;
+body {
+  overflow: hidden;
 }
 
-.cellSpacing{
-    padding:.25rem;
+// helper class
+
+.d-flex {
+  display: flex;
 }
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+// app component
+
+// sidenav component scss
+
+.innerSidenav {
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  // background-color: #fff;
+
+  
+  .sidebarHead {
+    transition: 0.6s all;
+    // border-right: 1px solid #eff0f2;
+    // align-items: center;
+    height: 60px;
+    padding-left: 3rem;
+    // position: absolute;  
+    display: flex;
+    width: 185px;
+    justify-content: space-between;
+    align-items: center;
+    left: 40px;
+
+    .icon-angular {
+      font-size: 2rem;
+    }
+
+    .sidebarHeader {
+      color: #2f55e4;
+      // transform: translateX(0);
+      left: 65px;
+      white-space: nowrap;
+      // top: 65px;
+    }
+  }
+
+  .sidebarBody {
+    // border: 1px solid black;
+    // border: 1px solid #eff0f2;
+    height: 100%;
+    overflow: auto;
+    scrollbar-gutter: stable;
+    scrollbar-width: thin;
+    flex-grow: 1;
+    // padding-top: 50px;
+
+    li {
+      // padding: 0.5rem;
+      list-style-type: none;
+      display: flex;
+
+      .btn_sidenav { 
+        display: flex;
+        // justify-content: left;
+        cursor: pointer;
+        color: #626262;
+        text-align: left;
+        background-color: #ffffff;
+        border: none;
+        padding: 0.55rem;
+        margin: 5px;
+        font-size: 1rem;
+        flex-grow: 1;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+
+        .links {
+          // position: absolute;
+          // left: 50px;
+          // transform: translateX(0px);
+          transition: 00.6s all;
+          padding-left: .5rem;
+        }
+
+        &.btn_sidenav_active {
+          color: #6777b2;
+          background-color: #dbe0fb;
+          color: #2d56e6;
+        }
+        &:hover {
+          color: #2d56e6;
+          background-color: #dbe0fb;
+        }
+      }
+    }
+  }
+}
+
+#toogleCheckBox:checked ~ .sidenav  .links , #toogleCheckBox:checked ~ .sidenav  .sidebarHead {
+  transform: translateX(250px);
+}
+
+#toogleCheckBox:checked ~ .sidenav .btn_sidenav{
+  // justify-content: center;
+}
+#toogleCheckBox:checked ~ .sidenav {
+  flex: 0 0 52px;
+  // background-color: #6777b2;
+}
+
+// sidenav checked

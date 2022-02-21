@@ -88,13 +88,13 @@
   ],
   "UserDetails": [
     {
-      "id": 1,
-      "firstName": "",
-      "lastName": "",
-      "email": "",
-      "phoneNo": "",
-      "clientName": "",
-      "office": ""
+      "id": 3,
+      "firstName": "asfsa",
+      "lastName": "asdasdas",
+      "email": "asd@aa.com",
+      "phoneNo": 4524,
+      "clientName": "1",
+      "office": "2"
     }
   ],
   "Offices": [

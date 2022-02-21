@@ -7,7 +7,7 @@ import { UserService } from '../../services/user.service';
 @Component({
   selector: 'app-user-form',
   templateUrl: './user-form.component.html',
-  styleUrls: ['./user-form.component.css']
+  styleUrls: ['./user-form.component.scss']
 })
 export class UserFormComponent implements OnInit {
 
@@ -37,7 +37,7 @@ export class UserFormComponent implements OnInit {
 
   public userBuildForm() {
     this.userForm = this.userFormBuilder.group({
-      id: ['', Validators.required],
+      id: ['',],
       firstName: ['', [Validators.required, Validators.minLength(4), Validators.maxLength(8)]],
       lastName: ['', Validators.required],
       email: ['', [Validators.required, Validators.email, Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')]],
@@ -65,9 +65,11 @@ export class UserFormComponent implements OnInit {
   // function to add user
 
   saveUser() {
-    this.addUser();
+    
+    // debugger
     if (this.userForm.valid) {
       this.addUser();
+     
 
     }
     else {
