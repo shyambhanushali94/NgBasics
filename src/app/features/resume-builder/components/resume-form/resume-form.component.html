@@ -70,19 +70,19 @@
                     <table>
                         <thead>
                             <tr>
-                                <th class="cellSpacing">
+                                <th class="table-cell">
                                     <label for="companyName">Company Name</label>
                                 </th>
-                                <th class="cellSpacing">
+                                <th class="table-cell">
                                     <label for="designation">Designation</label>
                                 </th>
-                                <th class="cellSpacing">
+                                <th class="table-cell">
                                     <label for="description">Description</label>
                                 </th>
-                                <th class="cellSpacing">
+                                <th class="table-cell">
                                     <label for="startYear">Start Year</label>
                                 </th>
-                                <th class="cellSpacing">
+                                <th class="table-cell">
                                     <label for="endYear">End Year</label>
                                 </th>
                                 <th>
@@ -94,21 +94,21 @@
 
                             <tr *ngFor="let skill of experienceArray['controls']; let i = index" [formGroupName]="i">
                                 <!--  ng for-->
-                                <td class="cellSpacing"><input type="text" id="companyName"
+                                <td class="table-cell"><input type="text" id="companyName"
                                         formControlName="companyName" placeholder="Enter:companyName">
                                 </td>
-                                <td class="cellSpacing"><input type="text" id="designation"
+                                <td class="table-cell"><input type="text" id="designation"
                                         formControlName="designation" placeholder="Enter:designation">
                                 </td>
-                                <td class="cellSpacing"><input type="text" id="description"
+                                <td class="table-cell"><input type="text" id="description"
                                         formControlName="description" placeholder="Enter:description">
                                 </td>
-                                <td class="cellSpacing"><input type="number" id="startYear" formControlName="startYear"
+                                <td class="table-cell"><input type="number" id="startYear" formControlName="startYear"
                                         placeholder="Enter:start year">
                                 </td>
-                                <td class="cellSpacing"><input type="number" id="endYear" formControlName="endYear"
+                                <td class="table-cell"><input type="number" id="endYear" formControlName="endYear"
                                         placeholder="Enter:end Year"></td>
-                                <td class="cellSpacing"><button type="button" (click)="deleteExperience(i)">-</button>
+                                <td class="table-cell"><button type="button" (click)="deleteExperience(i)">-</button>
                                 </td>
                             </tr>
                         </tbody>
@@ -128,9 +128,9 @@
                     <table>
                         <thead>
                             <tr>
-                                <th class="cellSpacing"><label for="university">University</label></th>
-                                <th class="cellSpacing"><label for="course">Course</label></th>
-                                <th class="cellSpacing"><label for="grade">Grade</label></th>
+                                <th class="table-cell"><label for="university">University</label></th>
+                                <th class="table-cell"><label for="course">Course</label></th>
+                                <th class="table-cell"><label for="grade">Grade</label></th>
                                 <th>
                                     <button type="button" (click)="addEucation()">+</button>
                                 </th>
@@ -140,12 +140,12 @@
                             <tr *ngFor="let education of this.educationArray['controls'];  let i = index"
                                 [formGroupName]="i">
                                 <!-- ng for  -->
-                                <td class="cellSpacing"><input type="text" formControlName="university"
+                                <td class="table-cell"><input type="text" formControlName="university"
                                         placeholder="Enter University" id="university">
                                 </td>
-                                <td class="cellSpacing"><input type="text" formControlName="course"
+                                <td class="table-cell"><input type="text" formControlName="course"
                                         placeholder="Enter cource" id="course"></td>
-                                <td class="cellSpacing"><input type="number" formControlName="grade"
+                                <td class="table-cell"><input type="number" formControlName="grade"
                                         placeholder="Enter grade" id="grade"></td>
                                 <td><button type="button" (click)="deleteEducation(i)">-</button></td>
                             </tr>

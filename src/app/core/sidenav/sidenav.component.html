@@ -5,10 +5,9 @@
     <span class="icon-angular"></span>
     <h3 class="sidebarHeader">Angular Tasks</h3>
   </div>
-  <div class="profile d-flex" >
+  <div class="profile d-flex">
     <figure class="profile_picture">
-      <img
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRe-0YmptDvusEEkZrUIx-AgFwn9wOG12FzhA&usqp=CAU"
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRe-0YmptDvusEEkZrUIx-AgFwn9wOG12FzhA&usqp=CAU"
         alt="">
     </figure>
     <div class="profile_info d-flex flex-column">
@@ -21,39 +20,67 @@
 
 
 
-  <nav class="sidebarBody">
-    <ul>
-      <li>
+  <nav class="sidebarBody d-flex flex-column">
+
+    <div>
+      <div class="nav_links">
+  
+        <ul >
+          <li>
         <button routerLink="/data-binding" class="btn_sidenav" routerLinkActive="btn_sidenav_active"> <span
-            class="icon-database"></span> <span class="links"> Data-Binding</span> </button>
+            class="icons icon-database"></span> <span class="links"> Data-Binding</span> </button>
       </li>
       <li>
         <button routerLink="/directives" class="btn_sidenav" routerLinkActive="btn_sidenav_active"> <span
-            class="icon-cogs"></span> <span class="links"> Directives</span> </button>
+            class="icons icon-cogs"></span> <span class="links"> Directives</span> </button>
       </li>
       <li>
         <button routerLink="/forms" class="btn_sidenav" routerLinkActive="btn_sidenav_active"> <span
-            class="icon-wpforms"></span> <span class="links">Forms</span> </button>
+            class="icons icon-wpforms"></span> <span class="links">Forms</span> </button>
       </li>
       <li>
         <button class="btn_sidenav" routerLink="employee" routerLinkActive="btn_sidenav_active"> <span
-            class="icon-user-tie"></span> <span class="links">Employee</span> </button>
+            class="icons icon-user-tie"></span> <span class="links">Employee</span> </button>
       </li>
       <li>
         <button class="btn_sidenav" routerLink="user-forms" routerLinkActive="btn_sidenav_active"> <span
-            class="icon-profile"></span> <span class="links">User-Form</span> </button>
+            class="icons icon-profile"></span> <span class="links">User-Form</span> </button>
       </li>
-      <li>
-        <button class="btn_sidenav" routerLink="resume" routerLinkActive="btn_sidenav_active"><span
-            class="icon-resume-portfolio-svgrepo-com"></span> <span class="links">Resume Builder</span> </button>
+    </ul>
+  </div> 
+    
+    <div class="nav_links">
+  
+  
+  <ul >
+    
+    
+    <li>
+      <button class="btn_sidenav" routerLink="resume" routerLinkActive="btn_sidenav_active"><span
+        class="icons icon-resume-portfolio-svgrepo-com"></span> <span class="links">Resume Builder</span> </button>
       </li>
       <li>
         <button class="btn_sidenav" routerLink="Users" routerLinkActive="btn_sidenav_active"> <span
-            class="icon-user"></span> <span class="links">Users</span> </button>
-      </li>
+          class="icons icon-user"></span> <span class="links">Users</span> </button>
+        </li>
+        
+      </ul>
+      
+    </div> 
 
-    </ul>
+    </div>
 
+
+    <div class="log-out">
+      <ul>
+        <li>
+          <button class="btn_sidenav" > <span class="icon-logout"></span> <span class="links">Log-Out</span> </button>
+        </li>
+      </ul>
+    </div>
+
+
+   
   </nav>
 
 

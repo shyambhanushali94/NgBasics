@@ -3,17 +3,17 @@
 
 
     <!-- Start:user form component Head part -->
-    <div class="userFormHead" style="display: flex; justify-content: space-between;">
+    <div class="userFormHead d-flex" >
         <span>
             <h2>Users</h2>
         </span>
 
 
-        <div style="display: flex">
+        <div class="d-flex userFormHead_operations">
             <span class="form-group col-md-8 ">
-                
+                <label  for="clients">Client:</label>
                 <select id="clients" class="form-control" >
-                    <option selected disabled>Client Name*</option>
+                    <option selected disabled>All</option>
                     <option *ngFor="let clientValue of clientName" [value]="clientValue.id">{{clientValue.name}}</option>
 
                 </select>
@@ -21,8 +21,8 @@
 
             <!-- toogle button to open form and disable when open -->
             <span>
-                <button type="button" class="btn btn-primary mx-3 btn-sm " [disabled]="btnDisabled"
-                    style="align-self: flex-start; width: 150px;" (click)="toogleForm()">+ NEW USER</button>
+                <button type="button" class="btn newEmployeeBtn" [disabled]="btnDisabled"
+                     (click)="toogleForm()">+ NEW USER</button>
             </span>
         </div>
     </div>
@@ -32,52 +32,52 @@
     <!-- Start:user form -->
     {{this.userForm.value | json}}
 
-    <div class="form" style="border: 1px solid grey; width: 100%;" *ngIf="showForm">
+    <div class="Userform"  *ngIf="showForm">
         <form   >
-            <div class="form-row" style="display: flex; justify-content: center; flex-wrap: wrap">
-                <div class="col">
+            <div class="form-row d-flex" >
+                <div class="form_col">
                     <input type="text" class="form-control" id="firsttName" placeholder="First Name" name="firsttName"
                         formControlName="firstName">
                         <div *ngIf="getValue['firstName'].touched">
-                            <span class="text-danger"
+                            <span class="text-danger small "
                                 *ngIf="getValue['firstName'].errors && getValue['firstName'].errors['required']">
                                 First-name required
                             </span>
                         </div>
-                        <div *ngIf="getValue['firstName']?.errors?.['minlength']" class="text-danger" >
+                        <div *ngIf="getValue['firstName']?.errors?.['minlength']" class="text-danger small" >
                             Name must be at least 4 characters long.
                         </div>
-                        <div *ngIf="getValue['firstName']?.errors?.['maxlength']" class="text-danger" style="color: red;">
+                        <div *ngIf="getValue['firstName']?.errors?.['maxlength']" class="text-danger small" style="color: red;">
                             Name must be at least 8 characters long.
                         </div>
                 </div>
-                <div class="col">
+                <div class="form_col">
                     <input type="text" class="form-control" id="lastName" placeholder="Last Name" name="lastName"
                         formControlName="lastName">
                         <div *ngIf="getValue['lastName'].touched">
-                            <span class="text-danger"
+                            <span class="text-danger small"
                                 *ngIf="getValue['lastName'].errors && getValue['lastName'].errors['required']">
                                 Last-name required
                             </span>
                         </div>
                 </div>
-                <div class="col">
+                <div class="form_col">
                     <input type="email" class="form-control" id="email" placeholder="Email" name="email"
                         formControlName="email">
                         <div *ngIf="getValue['email'].touched">
-                            <span class="text-danger"
+                            <span class="text-danger small"
                                 *ngIf="getValue['email'].errors && getValue['email'].errors['required']">
                                 Email required
                             </span>
-                            <div class="text-danger" *ngIf="getValue['email'].errors?.['email']">Email must be a valid email address</div>
+                            <div class="text-danger small" *ngIf="getValue['email'].errors?.['email']">Email must be a valid email address</div>
                         </div>
                         
                 </div>
-                <div class="col">
+                <div class="form_col">
                     <input type="number" class="form-control" id="contactNo" placeholder="Primary Contact Number"
                         name="contactNo" formControlName="phoneNo">
                         <div *ngIf="getValue['phoneNo'].touched">
-                            <span class="text-danger"
+                            <span class="text-danger small"
                                 *ngIf="getValue['phoneNo'].errors && getValue['phoneNo'].errors['required']">
                                 Contact number required
                             </span>
@@ -87,31 +87,31 @@
             </div>
 
 
-            <div style="display: flex; justify-content:center  ;padding-top: 20px;">
+            <div class="form_select_container d-flex" >
 
-                <div class="form-group col-md-4">
+                <div class="form-group form_col">
 
                     <select id="clients" class="form-control" formControlName="clientName">
-                        <option  disabled>Client Name*</option>
+                        <option selected disabled >Client Name*</option>
                         <option *ngFor="let clientValue of clientName" [value]="clientValue.id">{{clientValue.name}}</option>
 
                     </select>
                     <div *ngIf="getValue['clientName'].touched">
-                        <span class="text-danger"
+                        <span class="text-danger small"
                             *ngIf="getValue['clientName'].errors && getValue['clientName'].errors['required']">
                             Client Name required
                         </span>
                     </div>
                 </div>
-                <div class="form-group col-md-4">
+                <div class="form-group form_col">
 
                     <select id="office" class="form-control" name="office" formControlName="office">
-                        <option selected disabled>Office*</option>
+                        <option selected disabled >Office*</option>
                         <option *ngFor="let officeValue of officeDetails" [value]="officeValue.id">{{officeValue.name}}</option>
 
                     </select>
                     <div *ngIf="getValue['office'].touched">
-                        <span class="text-danger"
+                        <span class="text-danger small"
                             *ngIf="getValue['office'].errors && getValue['office'].errors['required']">
                             Office Details required
                         </span>
@@ -120,9 +120,9 @@
             </div>
 
 
-            <div style="display: flex; justify-content: right">
-                <button type="button" class="btn btn-danger" (click)="onCancel()">CANCEL</button>
-                <button type="submit" class="btn btn-primary mx-3">SAVE</button>
+            <div class="d-flex btn_container"style=" justify-content: right">
+                <button type="button" class="btn btn_cancel" (click)="onCancel()">X CANCEL</button>
+                <button type="submit" class="btn btn_save">SAVE</button>
 
             </div>
 

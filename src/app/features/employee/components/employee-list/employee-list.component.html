@@ -8,28 +8,28 @@
     <table class="employeeList">
         <thead>
             <tr>
-                <th class="cellSpacing">Id</th>
-                <th class="cellSpacing">First Name</th>
-                <!-- <th class="cellSpacing">Last Name</th> -->
-                <th class="cellSpacing">Email</th>
-                <th class="cellSpacing">Phone No</th>
-                <th class="cellSpacing">Gender</th>
-                <th class="cellSpacing">Date Of Employment</th>
-                <th class="cellSpacing">Department</th>
-                <th class="cellSpacing">Action</th>
+                <th class="table-cell">Id</th>
+                <th class="table-cell">First Name</th>
+                <!-- <th class="table-cell">Last Name</th> -->
+                <th class="table-cell">Email</th>
+                <th class="table-cell">Phone No</th>
+                <th class="table-cell">Gender</th>
+                <th class="table-cell">Date Of Employment</th>
+                <th class="table-cell">Department</th>
+                <th class="table-cell">Action</th>
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let employee of employeeDetails">
-                <td class="cellSpacing">{{employee.id}}</td>
-                <td class="cellSpacing">{{employee.firstname +' '+ employee.lastname}}</td>
-                <!-- <td class="cellSpacing">{{employee.lastname}}</td> -->
-                <td class="cellSpacing">{{employee.email}}</td>
-                <td class="cellSpacing">{{employee.phoneNo}}</td>
-                <td class="cellSpacing">{{employee.gender}}</td>
-                <td class="cellSpacing">{{employee.dateOfEmployment}}</td>
-                <td class="cellSpacing">{{employee.department | idToName : departments}}</td>
-                <td class="cellSpacing"><button class="btn btn-info btnSize"
+                <td class="table-cell">{{employee.id}}</td>
+                <td class="table-cell">{{employee.firstname +' '+ employee.lastname}}</td>
+                <!-- <td class="table-cell">{{employee.lastname}}</td> -->
+                <td class="table-cell">{{employee.email}}</td>
+                <td class="table-cell">{{employee.phoneNo}}</td>
+                <td class="table-cell">{{employee.gender}}</td>
+                <td class="table-cell">{{employee.dateOfEmployment}}</td>
+                <td class="table-cell">{{employee.department | idToName : departments}}</td>
+                <td class="table-cell"><button class="btn btn-info btnSize"
                         (click)="editEmployee(employee.id)">Edit</button>
                     <button class="btn btn-danger " type="button" (click)="deleteEmployee(employee.id)">Delete</button>
                 </td>

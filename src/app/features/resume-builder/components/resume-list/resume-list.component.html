@@ -7,19 +7,19 @@
     <table class="Resume-list">
         <thead>
             <tr>
-                <th class="cellSpacing">Id</th>
-                <th class="cellSpacing">First Name</th>
-                <th class="cellSpacing">Last Name</th>
-                <th class="cellSpacing">Action</th>
+                <th class="table-cell">Id</th>
+                <th class="table-cell">First Name</th>
+                <th class="table-cell">Last Name</th>
+                <th class="table-cell">Action</th>
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let resumes of resumeDetailLists">
-                <td class="cellSpacing">{{resumes.id}}</td>
-                <td class="cellSpacing">{{resumes.firstName}}</td>
-                <td class="cellSpacing">{{resumes.lastName}}</td>
+                <td class="table-cell">{{resumes.id}}</td>
+                <td class="table-cell">{{resumes.firstName}}</td>
+                <td class="table-cell">{{resumes.lastName}}</td>
 
-                <td class="cellSpacing"><button class="btn btn-info btnSize"
+                <td class="table-cell"><button class="btn btn-info btnSize"
                         (click)="viewResume(resumes.id)">view</button>
                     <button class="btn btn-danger" (click)="deleteResume(resumes.id)">Delete</button>
                 </td>

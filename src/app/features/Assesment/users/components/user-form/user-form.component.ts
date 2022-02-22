@@ -118,6 +118,8 @@ export class UserFormComponent implements OnInit {
 
 
   onCancel() {
+    this.showForm = false
+    this.btnDisabled = false;
     this.userForm.reset();
   }
 
@@ -130,7 +132,7 @@ export class UserFormComponent implements OnInit {
     this.showForm = true
 
     this.btnDisabled = true;
-    this.route.navigateByUrl(`Users`)
+    // this.route.navigateByUrl(`Users`)
   }
 
 
