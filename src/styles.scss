@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import "./assets/scss/scrollbar";
 * {
-  font-size: 1.125rem;
+  font-size: 1rem;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -35,6 +35,9 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
+  border: 1px solid #f6f6f6;
+
+
   // background-color: #fff;
 
   
@@ -43,13 +46,15 @@ body {
     // border-right: 1px solid #eff0f2;
     // align-items: center;
     height: 60px;
-    padding-left: 3rem;
+    padding:1.75rem 1.75rem 1.75rem 3rem;
+    
     // position: absolute;  
     display: flex;
-    width: 185px;
-    justify-content: space-between;
+    // width: 185px;
+    // justify-content: space-between;
     align-items: center;
-    left: 40px;
+    // left: 40px;
+    border-bottom: 1px solid #f6f6f6;
 
     .icon-angular {
       font-size: 2rem;
@@ -60,6 +65,7 @@ body {
       // transform: translateX(0);
       left: 65px;
       white-space: nowrap;
+      padding-left: .25rem;
       // top: 65px;
     }
   }
@@ -70,7 +76,7 @@ body {
     height: 100%;
     overflow: auto;
     scrollbar-gutter: stable;
-    scrollbar-width: thin;
+    // scrollbar-width: thin;
     flex-grow: 1;
     // padding-top: 50px;
 
