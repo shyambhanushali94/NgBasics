@@ -25,34 +25,14 @@
       "id": 1
     },
     {
-      "firstname": "",
-      "lastname": "",
-      "email": "",
-      "phoneNo": "",
+      "firstname": "a",
+      "lastname": "a",
+      "email": "a",
+      "phoneNo": 5,
       "dateOfEmployment": "",
       "gender": "",
       "department": "",
       "id": 2
-    },
-    {
-      "firstname": "",
-      "lastname": "",
-      "email": "",
-      "phoneNo": "",
-      "dateOfEmployment": "",
-      "gender": "",
-      "department": "",
-      "id": 3
-    },
-    {
-      "firstname": "",
-      "lastname": "",
-      "email": "a",
-      "phoneNo": "",
-      "dateOfEmployment": "",
-      "gender": "",
-      "department": "",
-      "id": 4
     }
   ],
   "ResumeData": [
@@ -113,6 +93,15 @@
       "phoneNo": 453,
       "clientName": "2",
       "office": "2"
+    },
+    {
+      "id": 6,
+      "firstName": "aaaa",
+      "lastName": "aaaa",
+      "email": "aa@aa.com",
+      "phoneNo": 321,
+      "clientName": "1",
+      "office": "1"
     }
   ],
   "Offices": [

@@ -1,13 +1,26 @@
 <div class="list_container">
-    <div class="searchContainer">
+    <div class="employeeFormHead " >
+        <div>
+            <h2>Users</h2>
+        </div>
 
-        <input type="search" name="" id=""><button routerLink="/employee/employee-form" class="btn">Click to Add
-            Employee</button>
 
+        <div class="d-flex searchContainer">
+            
+
+            <!-- toogle button to open form and disable when open -->
+           
+                <input type="search" name="" id=""><button routerLink="/employee/employee-form" class=" btnAddEmployee">Click to Add
+                    Employee</button>
+                <!-- <button type="button" class="btn addEmployee"
+                    >+ NEW USER</button> -->
+            
+        </div>
     </div>
-    <table class="employeeList">
+
+    <table class="userList ">
         <thead>
-            <tr>
+            <tr class="table_head">
                 <th class="table-cell">Id</th>
                 <th class="table-cell">First Name</th>
                 <!-- <th class="table-cell">Last Name</th> -->
