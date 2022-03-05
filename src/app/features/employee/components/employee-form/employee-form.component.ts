@@ -23,13 +23,13 @@ export class EmployeeFormComponent implements OnInit {
 
   ngOnInit(): void {
     this.getDepartmentData();
-  
+    
     const id = parseInt(this.activatedRoute.snapshot.params['id']);
-   
+    
+    this.buildForm();
     if(id){
       this.editEmployee(id);
     } else {
-      this.buildForm();
     }
 
   }
