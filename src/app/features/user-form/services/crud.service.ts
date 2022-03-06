@@ -9,6 +9,12 @@ import { User } from '../model/user.model';
 })
 export class CrudService {
 
+  crudData: Array<any> = [
+    {'name' : 'shyam', 'Age' : 27, id:0},
+    {'name' : 'krishna', 'Age' : 25, id:1},
+    {'name' : 'jigar', 'Age' : 22, id:2},
+  ]
+
   apiLink: string = environment.url
   constructor(private http: HttpClient) { }
 

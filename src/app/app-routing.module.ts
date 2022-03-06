@@ -34,7 +34,10 @@ const routes: Routes = [
     loadChildren: () => import('./features/resume-builder/resume-builder.module').then(m => m.ResumeBuilderModule)
   },
   { path: 'Users', loadChildren: () => import('./features/Assesment/users/users.module').then(m => m.UsersModule) },
-
+  {
+    path: 'newassesment',
+    loadChildren: () => import('./features/newassesment/newassesment.module').then(m => m.NewassesmentModule)
+  },
   {
     path: '**',
     component: PageNotFoundComponent
